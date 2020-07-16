@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Breadcrumb"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem_cmp_breadcrumb_v2">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <startLevel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="breadcrumb.startLevel.heltext"
+                                                fieldLabel="breadcrumb.startLevel.label"
+                                                max="100"
+                                                min="1"
+                                                name="./startLevel"
+                                                step="1"
+                                                value="${not empty cqDesign.startLevel ? cqDesign.startLevel : 2}"/>
+                                            <showHidden
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="${not empty cqDesign.showHidden ? cqDesign.showHidden : false}"
+                                                fieldDescription="breadcrumb.showHidden.heltext"
+                                                name="./showHidden"
+                                                text="breadcrumb.showHidden.text"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <hideCurrent
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="${not empty cqDesign.hideCurrent ? cqDesign.hideCurrent : false}"
+                                                fieldDescription="breadcrumb.hideCurrent.heltext"
+                                                name="./hideCurrent"
+                                                text="breadcrumb.hideCurrent.text"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <openIn
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="breadcrumb.openIn"
+                                                name="./target">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <newWindow
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="breadcrumb.openIn.nwindow"
+                                                        value="_blank"/>
+                                                    <currentWindow
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="breadcrumb.openIn.cwindow"
+                                                        value="_self"/>
+                                                </items>
+                                            </openIn>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
