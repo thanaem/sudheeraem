@@ -13,8 +13,5 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.css @ categories='sudheer.base'}"/>
-
-<!--/* Include Context Hub */-->
-<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
+<sly data-sly-test.favicon="${inheritedPageProperties.favicon}"/>
+<link rel="shortcut icon" type="image/x-icon" href="${favicon ? favicon : '/etc.clientlibs/baseline-tenant/clientlibs/clientlib-general/resources/icons/favicon.ico'}">
