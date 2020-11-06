@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          cq:showOnCreate="{Boolean}true"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Open Graph"
+          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <section
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Open Graph Fields"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <image
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Image"
+                                name="./ogImage"
+                                rootPath="/content/dam">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogImage"/>
+                        </image>
+						<site_name
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Site Name"
+                                name="./ogSiteName">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogSiteName"/>
+                        </site_name>
+                        <type
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Type"
+                                name="./ogType">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogType"/>
+                        </type>
+                        <title
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title"
+                                name="./ogTitle">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogTitle"/>
+                        </title>
+                        <imagetype
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Image Type"
+                                name="./ogImageType">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogImageType"/>
+                        </imagetype>
+                        <imagewidth
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Image Width"
+                                name="./ogImageWidth">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogImageWidth"/>
+                        </imagewidth>
+                        <imageheight
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Image Height"
+                                name="./ogImageHeight">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogImageHeight"/>
+                        </imageheight>
+                        <description
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Description"
+                                name="./ogDescription">
+                            <granite:data jcr:primaryType="nt:unstructured"
+                                          cq-msm-lockable="./ogDescription"/>
+                        </description>
+                    </items>
+                </section>
+            </items>
+        </column>
+    </items>
+</jcr:root>
